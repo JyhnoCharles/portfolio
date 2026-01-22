@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const projectsData = [
-    { title: 'Ticket Theater Manager', company: 'Actindo AG', summary: 'Payment gateway migration and integration.', details: 'Worked on migrating payment provider integration for Nintendo, handling edge cases, reconciliation and PCI considerations.' },
+    { title: 'Ticket Theater Manager', company: 'Actindo AG', summary: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, ', details: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, handling customer accounts, and ensuring a smooth experience for recurring patrons.' },
     { title: 'Social media Manager', company: 'Megafreight Services', summary: 'Multiple NetSuite API integrations.', details: 'Designed and implemented NetSuite SOAP/REST integrations to sync orders, inventory and invoices across systems.' },
     { title: 'Path-Following/Steering Simulation', company: 'Switch Telecom', summary: 'VoIP switchboard solution', details: 'Built a hosted Asterisk-based switchboard with multi-tenant routing, monitoring and failover.' },
     { title: 'Skeleton Siege', company: 'Nift', summary: 'Car aggregation platform', details: 'Co-founded and built an aggregator site to help buyers compare dealers and offers.' },
