@@ -23,12 +23,12 @@ function App() {
   }, []);
 
   const projectsData = [
-    { title: 'Ticket Theater Manager', company: 'Actindo AG', summary: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, ', details: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, handling customer accounts, and ensuring a smooth experience for recurring patrons.' },
-    { title: 'Social media Manager', company: 'Megafreight Services', summary: 'Multiple NetSuite API integrations.', details: 'Designed and implemented NetSuite SOAP/REST integrations to sync orders, inventory and invoices across systems.' },
-    { title: 'Path-Following/Steering Simulation', company: 'Switch Telecom', summary: 'VoIP switchboard solution', details: 'Built a hosted Asterisk-based switchboard with multi-tenant routing, monitoring and failover.' },
-    { title: 'Skeleton Siege', company: 'Nift', summary: 'Car aggregation platform', details: 'Co-founded and built an aggregator site to help buyers compare dealers and offers.' },
-    { title: 'Eglise Porte Etroite', company: 'Company X', summary: 'Short summary for project five.', details: 'Long form details for project five go here.' },
-    { title: 'Project Six', company: 'Company Y', summary: 'Short summary for project six.', details: 'Long form details for project six go here.' }
+    { title: 'Ticket Theater Manager', summary: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, ', details: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, handling customer accounts, and ensuring a smooth experience for recurring patrons.' },
+    { title: 'Social media Manager', summary: 'Multiple NetSuite API integrations.', details: 'Designed and implemented NetSuite SOAP/REST integrations to sync orders, inventory and invoices across systems.' },
+    { title: 'Path-Following/Steering Simulation', summary: 'VoIP switchboard solution', details: 'Built a hosted Asterisk-based switchboard with multi-tenant routing, monitoring and failover.' },
+    { title: 'Skeleton Siege', summary: 'Car aggregation platform', details: 'Co-founded and built an aggregator site to help buyers compare dealers and offers.' },
+    { title: 'Eglise Porte Etroite', summary: 'Short summary for project five.', details: 'Long form details for project five go here.' },
+
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
