@@ -23,11 +23,57 @@ function App() {
   }, []);
 
   const projectsData = [
-    { title: 'Ticket Theater Manager', summary: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, ', details: 'Manages season ticket operations by overseeing reservations, coordinating seating availability, handling customer accounts, and ensuring a smooth experience for recurring patrons.' },
-    { title: 'Social media Manager', summary: 'Multiple NetSuite API integrations.', details: 'Designed and implemented NetSuite SOAP/REST integrations to sync orders, inventory and invoices across systems.' },
-    { title: 'Path-Following/Steering Simulation', summary: 'VoIP switchboard solution', details: 'Built a hosted Asterisk-based switchboard with multi-tenant routing, monitoring and failover.' },
-    { title: 'Skeleton Siege', summary: 'Car aggregation platform', details: 'Co-founded and built an aggregator site to help buyers compare dealers and offers.' },
-    { title: 'Eglise Porte Etroite', summary: 'Short summary for project five.', details: 'Long form details for project five go here.' },
+    { title: 'Ticket Theater Manager', summary: 'With a team built and managed a ticketing system that handled seat reservations, user accounts, and payment tracking, focusing on reliability, edge-case handling, and smooth event operations.', 
+      details: [
+        'As part of an academic project, I designed and managed a theater ticket management system focused on reservations, seating organization, and basic payment tracking.',
+        'I implemented core features such as seat availability checks, user account handling, and reservation creation and deletion while handling edge cases like conflicting reservations and invalid inputs.',
+        'This project strengthened my problem-solving skills, reinforced clean code structure and debugging practices, and improved my ability to plan and iterate features from start to finish.'
+      ],
+      images: [photo, photo, photo], },
+
+
+
+
+    { title: 'Social media Manager', summary: 'Built my own social media management tools to learn how platform APIs and authentication work, gaining hands-on experience with OAuth, tokens, and real API limitations.', 
+      details: [
+        'I built a small social media management system to better understand how social platforms handle authentication and data access.',
+        'I worked directly with social media APIs, implementing OAuth flows, managing access tokens, and handling permissions required to read and post data.',
+        'I faced real-world challenges such as API limitations, rate limits, and changing documentation, which improved my ability to read technical docs, test approaches, and debug independently.'
+      ],
+      images: [] },
+
+
+
+
+    { title: 'AI Behavior System Using Finite State Machines', summary: 'Built an AI behavior system using a hard-coded finite state machine to model decision-making during a passing maneuver.', 
+      details: [
+        'As part of an Artificial Intelligence and Game Development course, I implemented a hard-coded state machine that simulated path-following and passing behavior using discrete states and probabilistic transitions.',
+        'The system used random number generation to drive transition logic, and tracked state and transition counts across simulation runs to analyze behavior patterns.',
+        'This project strengthened my understanding of finite state machines, probabilistic logic, and structured programming, and improved my testing and debugging approach for control systems.'
+      ],
+      images: [] },
+
+
+
+
+    { title: 'Skeleton Siege', summary: 'Collaborated in a team to build a game in Unity using C#, contributing to gameplay systems, debugging, and integrating features within a shared codebase.', 
+      details: [
+        'Skeleton Siege was a collaborative game development project built in Unity using C#, where I worked as part of a team to design and implement core gameplay mechanics.',
+        'I contributed to system logic, gameplay behavior, and debugging within a shared codebase, which strengthened my experience with version control and team collaboration.',
+        'This project reinforced collaborative development practices and applied software engineering principles in an interactive application.'
+      ],
+      images: [] },
+
+
+
+
+     { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
+       details: [
+        'Designed and launched a church website to serve a community of 100+ members through livestream access, online donations, and centralized service information.',
+        'Built a responsive, user-friendly interface using HTML, CSS, and JavaScript to improve accessibility and digital outreach.',
+        'Developed an internal admin feature to support attendance tracking via a scanning workflow, improving record accuracy and reducing manual effort.'
+       ],
+       images: [] },
 
   ];
 
@@ -79,73 +125,108 @@ function App() {
       <section id='skills' className='skills reveal'>
         <h2>Skills</h2>
         <div className='skills-grid'>
-          <div className='skill-column'>
-            <h4>Front-end</h4>
-            <ul>
-              <li className='skill-pill color-1'>HTML/CSS</li>
-              <li className='skill-pill color-2'>React</li>
-              <li className='skill-pill color-3'>Vite</li>
-            </ul>
+          <div className='skills-top'>
+            <div className='skill-column'>
+              <h4>Front-end</h4>
+              <ul>
+                <li className='skill-pill color-1'>HTML/CSS</li>
+                <li className='skill-pill color-2'>React</li>
+                <li className='skill-pill color-3'>Vite</li>
+              </ul>
+            </div>
+            <div className='skill-column'>
+              <h4>Back-end</h4>
+              <ul>
+                <li className='skill-pill color-4'>Node.js</li>
+                <li className='skill-pill color-5'>Express</li>
+                <li className='skill-pill color-6'>REST APIs</li>
+                <li className='skill-pill color-6'>OAuth</li>
+                <li className='skill-pill color-11'>PostgreSQL</li>
+                <li className='skill-pill color-12'>Supabase</li>
+              </ul>
+            </div>
+            <div className='skill-column'>
+              <h4>Tools</h4>
+              <ul>
+                <li className='skill-pill color-7'>Git</li>
+                <li className='skill-pill color-8'>VSCode</li>
+                <li className='skill-pill color-9'>npm</li>
+                <li className='skill-pill color-10'>Vercel</li>
+                <li className='skill-pill color-9'>Docker</li>
+              </ul>
+            </div>
+            <div className='skill-column'>
+              <h4>Frameworks</h4>
+              <ul>
+                <li className='skill-pill color-10'>React</li>
+                <li className='skill-pill color-11'>Next.js</li>
+                <li className='skill-pill color-12'>Tailwind</li>
+              </ul>
+            </div>
           </div>
-          <div className='skill-column'>
-            <h4>Back-end</h4>
-            <ul>
-              <li className='skill-pill color-4'>Node.js</li>
-              <li className='skill-pill color-5'>Express</li>
-              <li className='skill-pill color-6'>REST APIs</li>
-              <li className='skill-pill color-6'>OAuth</li>
-              <li className='skill-pill color-11'>PostgreSQL</li>
-              <li className='skill-pill color-12'>Supabase</li>
-            </ul>
-          </div>
-          <div className='skill-column'>
-            <h4>Tools</h4>
-            <ul>
-              <li className='skill-pill color-7'>Git</li>
-              <li className='skill-pill color-8'>VSCode</li>
-              <li className='skill-pill color-9'>npm</li>
-              <li className='skill-pill color-10'>Vercel</li>
-              <li className='skill-pill color-9'>Docker</li>
-            </ul>
-          </div>
-          <div className='skill-column'>
-            <h4>Frameworks</h4>
-            <ul>
-              <li className='skill-pill color-10'>React</li>
-              <li className='skill-pill color-11'>Next.js</li>
-              <li className='skill-pill color-12'>Tailwind</li>
-            </ul>
-          </div>
-          <div className='skill-column'>
-            <h4>Languages</h4>
-            <ul>
-              <li className='skill-pill color-1'>C++</li>
-              <li className='skill-pill color-2'>Java</li>
-              <li className='skill-pill color-3'>Python</li>
-              <li className='skill-pill color-4'>Lua</li>
-              <li className='skill-pill color-5'>C#</li>
-              <li className='skill-pill color-6'>Matlab</li>
-            </ul>
+
+          <div className='languages-bottom'>
+            <div className='skill-column centered-languages'>
+              <h4>Languages</h4>
+              <ul>
+                <li className='skill-pill color-1'>C++</li>
+                <li className='skill-pill color-2'>Java</li>
+                <li className='skill-pill color-3'>Python</li>
+                <li className='skill-pill color-4'>Lua</li>
+                <li className='skill-pill color-5'>C#</li>
+                <li className='skill-pill color-6'>Matlab</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <section id='contact' className='contact reveal'>
         <h2>Contact Me</h2>
-        <form className='contact-form' onSubmit={(e) => {
-          e.preventDefault();
-          const form = e.target;
-          const name = form.name.value;
-          const email = form.email.value;
-          const message = form.message.value;
-          const mailto = `mailto:you@example.com?subject=${encodeURIComponent('Portfolio contact from ' + name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>')}`;
-          window.location.href = mailto;
-        }}>
-          <label>Name<input name='name' required/></label>
-          <label>Email<input name='email' type='email' required/></label>
-          <label>Message<textarea name='message' required/></label>
-          <button type='submit' className='btn'>Send Email</button>
-        </form>
+      <form
+  className="contact-form"
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    // Honeypot (bots fill it, humans won't)
+    if (form.website.value) return;
+
+    const payload = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    const res = await fetch("https://formspree.io/f/XXXXXXX", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (res.ok) {
+      form.reset();
+      alert("Sent! ✅");
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  }}
+>
+  {/* Honeypot field (hidden) */}
+  <input
+    name="website"
+    type="text"
+    tabIndex="-1"
+    autoComplete="off"
+    style={{ position: "absolute", left: "-9999px" }}
+  />
+
+  <label>Name<input name="name" required /></label>
+  <label>Email<input name="email" type="email" required /></label>
+  <label>Message<textarea name="message" required /></label>
+  <button type="submit" className="btn">Send</button>
+</form>
+
       </section>
 
       {selectedProject && (
@@ -153,7 +234,20 @@ function App() {
           <div className='modal' onClick={(e)=>e.stopPropagation()}>
             <button className='modal-close' onClick={closeProject} aria-label='Close'>×</button>
             <h3>{selectedProject.title}</h3>
-            <p>{selectedProject.details}</p>
+            {Array.isArray(selectedProject.details) ? (
+              selectedProject.details.map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))
+            ) : (
+              <p>{selectedProject.details}</p>
+            )}
+            {selectedProject.images && selectedProject.images.length > 0 && (
+              <div className='modal-images'>
+                {selectedProject.images.slice(0,3).map((src, idx) => (
+                  <img key={idx} src={src} alt={`${selectedProject.title} screenshot ${idx+1}`} className='modal-image' />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

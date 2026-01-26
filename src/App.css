@@ -126,6 +126,7 @@ html {
 .project-card { background: #0f0f0f; color: #eaeaea; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.04); display:flex; flex-direction:column; justify-content:space-between; min-height:180px; }
 .project-card h3 { margin: 0 0 0.35rem 0; font-size:1.28rem; }
 .project-card p { color: #cfcfcf; margin: 0 0 0.65rem 0; line-height:1.6; font-size:1.02rem; }
+.project-thumb { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 0.8rem; }
 .project-card .company { font-size:0.85rem; color: #d2a86b; margin-bottom:0.5rem; }
 .project-card .view-link { margin-left: auto; color: #ff8c42; text-decoration: none; font-weight:600; }
 .project-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.35); transition: transform 220ms ease, box-shadow 220ms ease; }
@@ -134,7 +135,10 @@ html {
 .skills { background: transparent; padding: 0; border-radius: 0; }
 .skills > h2 { text-align: center; font-size: 2.6rem; margin-bottom: 1rem; }
 .skills-box { background: rgba(0,0,0,0.04); padding: 1.6rem; border-radius: 12px; max-width: 980px; margin: 0 auto; }
-.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 0; align-items:start; }
+.skills-grid { margin-top: 0; }
+.skills-top { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; align-items:start; }
+.languages-bottom { display:flex; justify-content:center; margin-top:1.2rem; }
+.centered-languages { width: 60%; max-width: 680px; }
 .skill-column { background: transparent; padding: 0.5rem 0; border-radius: 6px; }
 .skill-column h4 { margin: 0 0 0.6rem 0; font-size:1.25rem; color: #dcdcdc; }
 .skill-column ul { list-style: none; padding: 0; margin: 0; display:flex; flex-wrap:wrap; gap:0.6rem; }
@@ -184,9 +188,12 @@ section { padding: 6rem 1rem; }
 /* modal */
 .modal-overlay{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.6); z-index:2000; }
 .modal{ background:#0c0c0c; color:#f4f4f4; max-width:880px; width:92%; padding:1.5rem 1.75rem; border-radius:12px; position:relative; box-shadow: 0 22px 60px rgba(0,0,0,0.6); }
+.modal-image { width:100%; height:auto; border-radius:8px; margin-bottom:1rem; }
+.modal-images { display:flex; gap:0.5rem; margin-top:1rem; justify-content:space-between; }
+.modal-images .modal-image { width: calc((100% - 1rem) / 3); height: 100px; object-fit: cover; border-radius:6px; }
 .modal h3{ margin:0 0 0.25rem 0; font-size:1.6rem; }
 .modal .company{ color:#d2a86b; margin-bottom:0.9rem; font-weight:600; }
-.modal p{ line-height:1.7; font-size:1.05rem; }
+.modal p{ line-height:1.7; font-size:1.05rem; margin-bottom:0.9rem; text-align:left; max-width:760px; margin-left:auto; margin-right:auto; }
 .modal-close{ position:absolute; top:10px; right:12px; background:transparent; border:0; color:#ddd; font-size:1.8rem; cursor:pointer; }
 
 /* social icons larger */
