@@ -105,13 +105,13 @@ function App() {
         <div className='about-box'>
           <h2>About Me</h2>
           <p>
-            I’m a software engineer with a Computer Science background and hands-on experience building real-world applications. I enjoy working across the stack, from developing clean user interfaces to strengthening my C++ and systems-level fundamentals where performance and memory management matter.
+            I’m a computer science developer focused on full-stack web development. I primarily work with React, HTML, CSS, and Vite, and I enjoy building clean, responsive applications while continuously improving my skills.
           </p>
           <p>
-            I’m intentional about continuously improving my skills through building projects and interview-focused problem solving. Outside of engineering, I’ve held leadership roles mentoring and organizing groups, which has strengthened my communication and teamwork skills.
+            I’m intentional about continuously improving my skills through building projects and interview-focused problem-solving. Outside of engineering, I’ve held leadership roles mentoring and organizing groups, which has strengthened my communication and teamwork skills.
           </p>
           <p>
-            I’m excited to contribute to a dynamic team where I can grow as an engineer while delivering meaningful impact through technology. If you’d like to connect, feel free to reach out via the contact form below!
+            I’m excited to contribute to a dynamic team where I can grow as an engineer while making a meaningful impact with technology. If you’d like to connect, feel free to reach out via the contact form below!
           </p>
         </div>
       </section>
