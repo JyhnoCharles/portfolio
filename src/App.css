@@ -139,9 +139,15 @@ html {
 .skills-top { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; align-items:start; }
 .languages-bottom { display:flex; justify-content:center; margin-top:1.2rem; }
 .centered-languages { width: 60%; max-width: 680px; }
-.skill-column { background: transparent; padding: 0.5rem 0; border-radius: 6px; }
+.skill-column { background: transparent; padding: 0.5rem 0; border-radius: 6px; display:flex; flex-direction:column; align-items:center; }
 .skill-column h4 { margin: 0 0 0.6rem 0; font-size:1.25rem; color: #dcdcdc; }
-.skill-column ul { list-style: none; padding: 0; margin: 0; display:flex; flex-wrap:wrap; gap:0.6rem; }
+.skill-column ul { list-style: none; padding: 0; margin: 0; display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center; }
+
+/* Project header with GitHub link */
+.project-header { display:flex; align-items:center; gap:0.6rem; }
+.project-github { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; color:inherit; background: rgba(255,255,255,0.02); border-radius:8px; text-decoration:none; }
+.project-github svg { width:18px; height:18px; color:inherit; display:block; }
+.project-github:hover { transform: translateY(-3px); transition: transform 180ms ease; }
 .skill-pill { background: rgba(255,255,255,0.02); color:#fff; padding:0.55rem 0.85rem; border-radius:14px; font-size:1rem; border:1px solid rgba(255,255,255,0.04); display:inline-block; transition: transform 180ms ease; }
 .skill-pill:hover { transform: translateY(-4px); }
 
@@ -241,3 +247,16 @@ section { padding: 6rem 1rem; }
 .read-the-docs {
   color: #888;
 }
+
+/* Certifications CSS */
+/* Certifications */
+.cert-area { width: 100%; max-width: 780px; }
+.cert-section-title { font-size: 12px; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 16px; }
+.cert-card { display: flex; align-items: center; gap: 16px; background: #0c0c0c; border: 1px solid #2a2a2a; border-radius: 12px; padding: 14px 18px; width: fit-content; }
+.cert-badge { width: 38px; height: 38px; border-radius: 8px; background: #1a2a1a; border: 1px solid #2a3a2a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cert-info { display: flex; flex-direction: column; gap: 3px; }
+.cert-name { font-size: 14px; font-weight: 500; color: #ddd; }
+.cert-issuer { font-size: 12px; color: #555; text-align: left; }
+.cert-pill { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #1a2e1a; border: 1px solid #2a4a2a; color: #6dbf6d; width: fit-content; margin-top: 2px; }
+
+.cert-card:hover { transform: translateY(-3px); transition: transform 180ms ease; box-shadow: rgba(0,0,0,0.88) 0 20px 60px;}

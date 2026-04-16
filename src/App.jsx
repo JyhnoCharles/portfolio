@@ -18,7 +18,11 @@ import game1 from './assets/IMG/game1.png'
 import game2 from './assets/IMG/game2.png'
 import path from './assets/IMG/path.png'
 import path1 from './assets/IMG/path1.png'
+import picture1 from './assets/img/AI.png'
+import picture2 from './assets/img/picture2.png'
+import picture3 from './assets/img/picture3.png'
 
+// Main App component
 function App() {
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal');
@@ -31,8 +35,10 @@ function App() {
     return () => obs.disconnect();
   }, []);
 
+  // Project data with details and images for the modal
   const projectsData = [
     { title: 'Ticket Theater Manager', summary: 'With a team built and managed a ticketing system that handled seat reservations, user accounts, and payment tracking, focusing on reliability, edge-case handling, and smooth event operations.', 
+      github: 'https://github.com/JyhnoCharles',
       details: [
         'As part of an academic project, I designed and managed a theater ticket management system focused on reservations, seating organization, and basic payment tracking.',
         'I implemented core features such as seat availability checks, user account handling, and reservation creation and deletion while handling edge cases like conflicting reservations and invalid inputs.',
@@ -44,6 +50,7 @@ function App() {
 
 
     { title: 'Social media Manager', summary: 'Built my own social media management tools to learn how platform APIs and authentication work, gaining hands-on experience with OAuth, tokens, and real API limitations.', 
+      github: 'https://github.com/JyhnoCharles',
       details: [
         'I built a small social media management system to better understand how social platforms handle authentication and data access.',
         'I worked directly with social media APIs, implementing OAuth flows, managing access tokens, and handling permissions required to read and post data.',
@@ -55,6 +62,7 @@ function App() {
 
 
     { title: 'AI Pathfinding & Steering Behaviors System', summary: 'Developed a 2D pathfinding and movement system combining grid-based A* search with real-time steering behaviors (Seek, Flee, Arrive, Follow Path), producing smooth, physically-based character motion visualized through trajectory plots.', 
+      github: 'https://github.com/JyhnoCharles',
       details: [
         'Built a modular 2D navigation system that cleanly separates global planning from local motion control, allowing interchangeable planners (grid A*, Dijkstra, Theta*) and steering modules.',
         'Implemented A* with admissible heuristics (Manhattan, Euclidean) and optional tie-breakers for speed; added Theta* to produce shorter, smoother paths by enabling line-of-sight shortcuts when appropriate.',
@@ -67,6 +75,7 @@ function App() {
 
 
     { title: 'Skeleton Siege', summary: 'Collaborated in a team to build a game in Unity using C#, contributing to gameplay systems, debugging, and integrating features within a shared codebase.', 
+      github: 'https://github.com/JyhnoCharles',
       details: [
         'Skeleton Siege was a collaborative game development project built in Unity using C#, where I worked as part of a team to design and implement core gameplay mechanics.',
         'I contributed to system logic, gameplay behavior, and debugging within a shared codebase, which strengthened my experience with version control and team collaboration.',
@@ -78,6 +87,7 @@ function App() {
 
 
      { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
+       github: 'https://github.com/JyhnoCharles',
        details: [
         'Designed and launched a church website to serve a community of 100+ members through livestream access, online donations, and centralized service information.',
         'Built a responsive, user-friendly interface using HTML, CSS, and JavaScript to improve accessibility and digital outreach.',
@@ -85,12 +95,32 @@ function App() {
        ],
        images: [web] },
 
+    { title: 'Unity ML Racing Agent', summary: 'Built a reinforcement learning agent for a Unity racing environment using Unity ML-Agents to learn lane-keeping, overtaking, and reward shaping.',
+      github: 'https://github.com/JyhnoCharles/unity-ml-racing-agent',
+      video: 'https://youtu.be/BwBkFZGSubQ',
+      details: [
+        'Created a training environment in Unity using the ML-Agents toolkit to teach a racing agent lane following and overtaking behaviors.',
+        'Implemented reward shaping, curriculum learning, and domain randomization to improve robustness across tracks.',
+        'Trained using PPO and logged training metrics; integrated a simple rollout system for visualizing learned policies in-editor.'
+      ],
+      images: [picture1, picture2, picture3]
+    },
+
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [lightboxSrc, setLightboxSrc] = useState(null);
   function openProject(i){ setSelectedProject(projectsData[i]); }
   function closeProject(){ setSelectedProject(null); }
+
+
+
+
+
+
+
+
+// Main render
 
   return (
     <main>
@@ -116,13 +146,37 @@ function App() {
         </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* // Projects section with modal details and lightbox for images */}
+
       <section id='projects' className='projects reveal'>
         <h2>Projects</h2>
         <div className='projects-grid'>
           {projectsData.map((p, i) => (
             <div key={i} className='project-card'>
               <div>
-                <h3>{p.title}</h3>
+                <div className='project-header' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                  <a href={p.github || 'https://github.com/JyhnoCharles'} target='_blank' rel='noreferrer' className='project-github' aria-label={`${p.title} GitHub`}>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='false'>
+                      <path fill='currentColor' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.334-5.467-5.93 0-1.31.468-2.381 1.235-3.221-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.77.84 1.23 1.911 1.23 3.221 0 4.61-2.807 5.625-5.48 5.92.43.372.81 1.102.81 2.222 0 1.606-.014 2.903-.014 3.297 0 .32.21.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/>
+                    </svg>
+                  </a>
+                  <h3 style={{margin:0, flex:1}}>{p.title}</h3>
+                </div>
                 <p>{p.summary}</p>
               </div>
               <div style={{display:'flex', justifyContent:'flex-end', marginTop:'8px'}}>
@@ -164,14 +218,18 @@ function App() {
                 <li className='skill-pill color-10'>Vercel</li>
                 <li className='skill-pill color-9'>Docker</li>
                 <li className='skill-pill color-1'>Unity</li>
+                <li className='skill-pill color-12'>Supabase</li>
               </ul>
             </div>
             <div className='skill-column'>
-              <h4>Frameworks</h4>
+              <h4>Frameworks & Libraries</h4>
               <ul>
                 <li className='skill-pill color-10'>React</li>
                 <li className='skill-pill color-11'>Next.js</li>
                 <li className='skill-pill color-12'>Tailwind</li>
+                <li className='skill-pill color-9'>PyTorch</li>
+                <li className='skill-pill color-8'>ML-Agents</li>
+
               </ul>
             </div>
           </div>
@@ -192,6 +250,54 @@ function App() {
         </div>
       </section>
 
+      <section>
+          <h2> Certifications </h2>
+                      {/* Certifications */}
+            <hr style={{ border: 'none', borderTop: '1px solid #222', margin: '40px 0' }} />
+            <a href='https://www.credly.com/badges/b67d3968-fe34-45d5-942c-60c65893e400/public_url' target='_blank' rel='noreferrer' style={{ textDecoration: 'none', color: 'inherit' }} aria-label='AWS Certified Cloud Practitioner Certification'>
+            <div className="cert-area">
+              <p className="cert-section-title"></p>
+              <div className="cert-card">
+
+                <div className="cert-badge">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <path d="M20 6L8 13V27L20 34L32 27V13L20 6Z" fill="#232" stroke="#3a6a3a" strokeWidth="1.5" />
+                    <path d="M14 20L18 24L26 16" stroke="#6dbf6d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+
+                <div className="cert-info">
+                  <span className="cert-name">AWS Certified Cloud Practitioner</span>
+                  <span className="cert-issuer">Amazon Web Services</span>
+                  <span className="cert-pill">Certified</span>
+                </div>
+
+              </div>
+            </div>
+
+            </a>
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/*       Contact me box  */}
       <section id='contact' className='contact reveal'>
         <h2>Contact Me</h2>
       <form
@@ -217,12 +323,13 @@ function App() {
 
     if (res.ok) {
       form.reset();
-      alert("Sent! ✅");
+      alert("Sent!");
     } else {
       alert("Something went wrong. Try again.");
     }
   }}
 >
+
   {/* Honeypot field (hidden) */}
   <input
     name="website"
@@ -232,7 +339,7 @@ function App() {
     style={{ position: "absolute", left: "-9999px" }}
   />
 
-  <label>Name<input name="name" required /></label>
+  <label>Name<input name="name" required /></label> 
   <label>Email<input name="email" type="email" required /></label>
   <label>Message<textarea name="message" required /></label>
   <button type="submit" className="btn">Send</button>
@@ -245,6 +352,15 @@ function App() {
           <div className='modal' onClick={(e)=>e.stopPropagation()}>
             <button className='modal-close' onClick={closeProject} aria-label='Close'>×</button>
             <h3>{selectedProject.title}</h3>
+            {selectedProject.video && (
+              <a href={selectedProject.video} target='_blank' rel='noreferrer' aria-label={`${selectedProject.title} Video`} style={{display:'inline-flex', alignItems:'center', gap:'8px', background:'#FF0000', color:'#fff', padding:'6px 10px', borderRadius:'6px', marginTop:'8px', textDecoration:'none'}}>
+                <svg width='18' height='18' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='false' focusable='false'>
+                  <path fill='#fff' d='M10 8.64v6.72L15.27 12 10 8.64z'/>
+                  <path fill='#fff' d='M23.5 6.2s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.9 2.5 12 2.5 12 2.5s-4.9 0-8.5.4c-.5 0-1.4 0-2.1 1C.7 4.6.5 6.2.5 6.2S0 8.3 0 10.5v3C0 16 0.5 18 0.5 18s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.8.2 7.8.4 7.8.4s4.9 0 8.5-.4c.5 0 1.4 0 2.1-1 .6-.7.8-2.3.8-2.3s.5-2.1.5-4.3v-3c0-2.2-.5-4.3-.5-4.3z' opacity='0.0'/>
+                </svg>
+                <span>Watch Video</span>
+              </a>
+            )}
             {Array.isArray(selectedProject.details) ? (
               selectedProject.details.map((para, idx) => (
                 <p key={idx}>{para}</p>
@@ -280,9 +396,15 @@ function App() {
   )
 }
 
+
+
+
+
+
+
 export default App
 
-
+{/* Header component with effects */}
 function HeaderWithEffects({ photo }){
   const fullGreeting = "Hello, I'm Jyhno Pierre Charles";
   const [greeting, setGreeting] = useState('');
