@@ -12,7 +12,7 @@ import photo from './assets/IMG/photo.png'
 import photo1 from './assets/IMG/Java1.png'
 import photo2 from './assets/IMG/Java2.png'
 import photo3 from './assets/IMG/Java3.png'
-import web from './assets/IMG/web.png'
+// import web from './assets/IMG/web.png'
 import game from './assets/IMG/game.png'
 import game1 from './assets/IMG/game1.png'
 import game2 from './assets/IMG/game2.png'
@@ -21,6 +21,9 @@ import path1 from './assets/IMG/path1.png'
 import picture1 from './assets/img/AI.png'
 import picture2 from './assets/img/picture2.png'
 import picture3 from './assets/img/picture3.png'
+import map1 from './assets/img/map1.png'
+import map2 from './assets/img/Map2.png'
+import map3 from './assets/img/Map3.png'
 
 // Main App component
 function App() {
@@ -37,8 +40,18 @@ function App() {
 
   // Project data with details and images for the modal
   const projectsData = [
+
+      { title: 'NBA Origins MAP', summary: 'An interactive map visualizing NBA players by birthplace, built on a fully serverless AWS architecture to demonstrate end-to-end cloud deployment.', 
+      details: [
+        'I designed and built an interactive map using MapLibre GL JS that visualizes NBA players by birthplace, with a detail panel, search autocomplete, and filtering to explore players by team, position, and origin.',
+        'built a serverless backend on AWS using Lambda, API Gateway, DynamoDB, and S3 to store and serve player data, giving me hands-on experience building and deploying cloud applications.',
+        'I configured CloudFront, Route 53, and ACM to host the app on a custom domain with HTTPS, handling SSL certificates, caching, and DNS from start to finish.',
+      ],
+      images: [map1, map2, map3] },
+
+
     { title: 'Ticket Theater Manager', summary: 'With a team built and managed a ticketing system that handled seat reservations, user accounts, and payment tracking, focusing on reliability, edge-case handling, and smooth event operations.', 
-      github: 'https://github.com/JyhnoCharles',
+
       details: [
         'As part of an academic project, I designed and managed a theater ticket management system focused on reservations, seating organization, and basic payment tracking.',
         'I implemented core features such as seat availability checks, user account handling, and reservation creation and deletion while handling edge cases like conflicting reservations and invalid inputs.',
@@ -49,7 +62,7 @@ function App() {
 
 
 
-    { title: 'Social media Manager', summary: 'Built my own social media management tools to learn how platform APIs and authentication work, gaining hands-on experience with OAuth, tokens, and real API limitations.', 
+    { title: 'Social media Manager', summary: 'Explored social platform APIs by building a small tool to authenticate via OAuth and pull live data from Twitter/X, learning firsthand how token-based auth, rate limits, and real-world API constraints work.', 
       github: 'https://github.com/JyhnoCharles',
       details: [
         'I built a small social media management system to better understand how social platforms handle authentication and data access.',
@@ -85,24 +98,22 @@ function App() {
 
 
 
-
-     { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
-       github: 'https://github.com/JyhnoCharles',
-       details: [
-        'Designed and launched a church website to serve a community of 100+ members through livestream access, online donations, and centralized service information.',
-        'Built a responsive, user-friendly interface using HTML, CSS, and JavaScript to improve accessibility and digital outreach.',
-        'Developed an internal admin feature to support attendance tracking via a scanning workflow, improving record accuracy and reducing manual effort.'
-       ],
-       images: [web] },
+    //  { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
+    //    github: 'https://github.com/JyhnoCharles',
+    //    details: [
+    //     'Designed and launched a church website to serve a community of 100+ members through livestream access, online donations, and centralized service information.',
+    //     'Built a responsive, user-friendly interface using HTML, CSS, and JavaScript to improve accessibility and digital outreach.',
+    //   ],
+    //    images: [web] },
 
     { title: 'Unity ML Racing Agent', summary: 'Built a reinforcement learning agent for a Unity racing environment using Unity ML-Agents to learn lane-keeping, overtaking, and reward shaping.',
       github: 'https://github.com/JyhnoCharles/unity-ml-racing-agent',
       video: 'https://youtu.be/BwBkFZGSubQ',
       details: [
-        'Created a training environment in Unity using the ML-Agents toolkit to teach a racing agent lane following and overtaking behaviors.',
-        'Implemented reward shaping, curriculum learning, and domain randomization to improve robustness across tracks.',
-        'Trained using PPO and logged training metrics; integrated a simple rollout system for visualizing learned policies in-editor.'
-      ],
+          'I built a small tool to learn how social platforms handle authentication and data access, focusing on Twitter/X as a case study.',
+          'I implemented OAuth flows from scratch, managing access tokens and permissions to authenticate requests and pull live data from the platform.',
+          'I navigated real-world constraints like rate limits, inconsistent documentation, and shifting API behavior, which sharpened my ability to read technical docs, test assumptions, and debug independently.'
+        ],
       images: [picture1, picture2, picture3]
     },
 
@@ -170,11 +181,11 @@ function App() {
             <div key={i} className='project-card'>
               <div>
                 <div className='project-header' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                  <a href={p.github || 'https://github.com/JyhnoCharles'} target='_blank' rel='noreferrer' className='project-github' aria-label={`${p.title} GitHub`}>
+                  {/* <a href={p.github || 'https://github.com/JyhnoCharles'} target='_blank' rel='noreferrer' className='project-github' aria-label={`${p.title} GitHub`}>
                     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='false'>
                       <path fill='currentColor' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.467-1.334-5.467-5.93 0-1.31.468-2.381 1.235-3.221-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.77.84 1.23 1.911 1.23 3.221 0 4.61-2.807 5.625-5.48 5.92.43.372.81 1.102.81 2.222 0 1.606-.014 2.903-.014 3.297 0 .32.21.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/>
                     </svg>
-                  </a>
+                  </a> */}
                   <h3 style={{margin:0, flex:1}}>{p.title}</h3>
                 </div>
                 <p>{p.summary}</p>
@@ -297,8 +308,8 @@ function App() {
 
 
 
-        {/*       Contact me box  */}
-      <section id='contact' className='contact reveal'>
+              {/* Contact me box  */}
+      {/* <section id='contact' className='contact reveal'>
         <h2>Contact Me</h2>
       <form
   className="contact-form"
@@ -331,21 +342,21 @@ function App() {
 >
 
   {/* Honeypot field (hidden) */}
-  <input
+  {/* <input
     name="website"
     type="text"
     tabIndex="-1"
     autoComplete="off"
     style={{ position: "absolute", left: "-9999px" }}
-  />
+  /> */}
 
-  <label>Name<input name="name" required /></label> 
+  {/* <label>Name<input name="name" required /></label> 
   <label>Email<input name="email" type="email" required /></label>
   <label>Message<textarea name="message" required /></label>
-  <button type="submit" className="btn">Send</button>
-</form>
+  <button type="submit" className="btn">Send</button> */}
+{/* </form> */} 
 
-      </section>
+      {/* </section> */}
 
       {selectedProject && (
         <div className='modal-overlay' onClick={closeProject} role='dialog' aria-modal='true'>
