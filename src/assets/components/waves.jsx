@@ -96,7 +96,7 @@ const Waves = ({
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const boundingRef = useRef({ width: 0, height: 0, left: 0, top: 0 });
-  const noiseRef = useRef(new Noise(Math.random()));
+  const noiseRef = useRef(new Noise(14));
   const linesRef = useRef([]);
   const mouseRef = useRef({
     x: -10,

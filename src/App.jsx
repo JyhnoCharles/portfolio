@@ -12,10 +12,10 @@ import photo from './assets/IMG/photo.png'
 import photo1 from './assets/IMG/Java1.png'
 import photo2 from './assets/IMG/Java2.png'
 import photo3 from './assets/IMG/Java3.png'
-// import web from './assets/IMG/web.png'
-import game from './assets/IMG/game.png'
-import game1 from './assets/IMG/game1.png'
-import game2 from './assets/IMG/game2.png'
+import web from './assets/IMG/web.png'
+// import game from './assets/IMG/game.png'
+// import game1 from './assets/IMG/game1.png'
+// import game2 from './assets/IMG/game2.png'
 import path from './assets/IMG/path.png'
 import path1 from './assets/IMG/path1.png'
 import picture1 from './assets/img/AI.png'
@@ -42,6 +42,7 @@ function App() {
   const projectsData = [
 
       { title: 'NBA Origins MAP', summary: 'An interactive map visualizing NBA players by birthplace, built on a fully serverless AWS architecture to demonstrate end-to-end cloud deployment.', 
+      link: 'https://nbamapped.com/',
       details: [
         'I designed and built an interactive map using MapLibre GL JS that visualizes NBA players by birthplace, with a detail panel, search autocomplete, and filtering to explore players by team, position, and origin.',
         'built a serverless backend on AWS using Lambda, API Gateway, DynamoDB, and S3 to store and serve player data, giving me hands-on experience building and deploying cloud applications.',
@@ -50,61 +51,63 @@ function App() {
       images: [map1, map2, map3] },
 
 
-    { title: 'Ticket Theater Manager', summary: 'With a team built and managed a ticketing system that handled seat reservations, user accounts, and payment tracking, focusing on reliability, edge-case handling, and smooth event operations.', 
+    { title: 'Ticket Theater Manager', summary: 'For my capstone project, With a team built a ticketing system that handled seat reservations, user accounts, and payment tracking, focusing on reliability, edge-case handling, and smooth event operations.', 
 
       details: [
-        'As part of an academic project, I designed and managed a theater ticket management system focused on reservations, seating organization, and basic payment tracking.',
-        'I implemented core features such as seat availability checks, user account handling, and reservation creation and deletion while handling edge cases like conflicting reservations and invalid inputs.',
-        'This project strengthened my problem-solving skills, reinforced clean code structure and debugging practices, and improved my ability to plan and iterate features from start to finish.'
+        'Collaborated with a team on an academic theater ticket management system, working in Agile sprints with a shared ticketing board to plan, assign, and track tasks from backlog to completion.',
+        'Implemented core features including seat availability checks, user account handling, and reservation creation/deletion, while handling edge cases like conflicting reservations and invalid input.',
+        'Gained firsthand experience with Agile workflows, sprint planning, and ticket-based task tracking.',
       ],
       images: [photo1, photo2, photo3], },
 
 
 
 
-    { title: 'Social media Manager', summary: 'Explored social platform APIs by building a small tool to authenticate via OAuth and pull live data from Twitter/X, learning firsthand how token-based auth, rate limits, and real-world API constraints work.', 
+    { title: 'Social media Manager', summary: 'Explored social platform APIs by building a small tool to authenticate via OAuth and pull live data from Twitter/X, learning how token-based auth, rate limits, and real-world API constraints work.', 
       github: 'https://github.com/JyhnoCharles',
       details: [
         'I built a small social media management system to better understand how social platforms handle authentication and data access.',
         'I worked directly with social media APIs, implementing OAuth flows, managing access tokens, and handling permissions required to read and post data.',
-        'I faced real-world challenges such as API limitations, rate limits, and changing documentation, which improved my ability to read technical docs, test approaches, and debug independently.'
+        
       ],
       images: [] },
 
 
 
 
-    { title: 'AI Pathfinding & Steering Behaviors System', summary: 'Developed a 2D pathfinding and movement system combining grid-based A* search with real-time steering behaviors (Seek, Flee, Arrive, Follow Path), producing smooth, physically-based character motion visualized through trajectory plots.', 
+    { title: 'AI Pathfinding & Steering Behaviors System', summary: 'Developed a 2D pathfinding and movement system combining grid-based A* search with real-time steering behaviors, producing smooth, physically-based character motion visualized through trajectory plots.', 
       github: 'https://github.com/JyhnoCharles',
       details: [
-        'Built a modular 2D navigation system that cleanly separates global planning from local motion control, allowing interchangeable planners (grid A*, Dijkstra, Theta*) and steering modules.',
-        'Implemented A* with admissible heuristics (Manhattan, Euclidean) and optional tie-breakers for speed; added Theta* to produce shorter, smoother paths by enabling line-of-sight shortcuts when appropriate.',
-        'Converted discrete paths into continuous motion using steering behaviors (Seek, Arrive, Obstacle Avoidance, Follow-Path) with lookahead, velocity clamping, acceleration limits, and orientation smoothing for natural movement.',
-        'Instrumented simulations with per-timestep logs (position, velocity, acceleration, heading, behavior state) and realtime visualization overlays for paths, waypoints, and collision bounds to support debugging and parameter tuning.'
+        'Built a Python simulation of autonomous path-following, where a virtual agent follows a path by predicting a target point ahead of it rather than just steering toward the next waypoint.',
+        'Implemented a look-ahead algorithm that finds a point a set distance along the path and steers toward it, producing smooth, natural-looking movement instead of sharp turns.',
+        'Tuned the look-ahead distance and steering response to balance responsiveness with smoothness, so the agent follows curves and turns without overshooting or jittering.',
       ],
+
       images: [path, path1] },
 
 
 
 
-    { title: 'Skeleton Siege', summary: 'Collaborated in a team to build a game in Unity using C#, contributing to gameplay systems, debugging, and integrating features within a shared codebase.', 
-      github: 'https://github.com/JyhnoCharles',
-      details: [
-        'Skeleton Siege was a collaborative game development project built in Unity using C#, where I worked as part of a team to design and implement core gameplay mechanics.',
-        'I contributed to system logic, gameplay behavior, and debugging within a shared codebase, which strengthened my experience with version control and team collaboration.',
-        'This project reinforced collaborative development practices and applied software engineering principles in an interactive application.'
-      ],
-      images: [game, game1, game2] },
-
-
-
-    //  { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
-    //    github: 'https://github.com/JyhnoCharles',
-    //    details: [
-    //     'Designed and launched a church website to serve a community of 100+ members through livestream access, online donations, and centralized service information.',
-    //     'Built a responsive, user-friendly interface using HTML, CSS, and JavaScript to improve accessibility and digital outreach.',
+    // { title: 'Skeleton Siege', summary: 'Collaborated with a team to build a game in Unity using C#, contributing to gameplay systems, debugging, and integrating features within a shared codebase.', 
+    //   github: 'https://github.com/JyhnoCharles',
+    //   details: [
+    //     'Skeleton Siege was a collaborative game development project built in Unity using C#, where I worked as part of a team to design and implement core gameplay mechanics.',
+    //     'I contributed to system logic, UI, and debugging within a shared codebase, which strengthened my experience with version control and team collaboration.',
+    //     'This project reinforced collaborative development practices and applied software engineering principles in an interactive application.'
     //   ],
-    //    images: [web] },
+    //   images: [game, game1, game2] },
+
+
+
+
+     { title: 'Eglise Porte Etroite', summary: 'Designed and deployed a responsive church website with livestreams, donations, and admin tools to connect and support a growing community.',
+       link: 'https://www.egliseporteetroite.org',
+       details: [
+        'Designed and deployed a responsive church website serving a congregation of 150-200 members, integrating livestreams, donations, and community outreach features',
+        'Built a serverless contact pipeline using AWS Lambda, API Gateway, and SES to capture and store visitor submissions in DynamoDB, enabling direct communication between members and leadership.',
+        'Developed an internal admin feature to support attendance tracking via a scanning workflow, improving record accuracy and reducing manual effort.'
+       ],
+       images: [web] },
 
     { title: 'Unity ML Racing Agent', summary: 'Built a reinforcement learning agent for a Unity racing environment using Unity ML-Agents to learn lane-keeping, overtaking, and reward shaping.',
       github: 'https://github.com/JyhnoCharles/unity-ml-racing-agent',
@@ -121,17 +124,30 @@ function App() {
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [lightboxSrc, setLightboxSrc] = useState(null);
-  function openProject(i){ setSelectedProject(projectsData[i]); }
-  function closeProject(){ setSelectedProject(null); }
+  const [currentPicture, setCurrentPicture] = useState(0);
+  function openProject(i){
+    setSelectedProject(projectsData[i]);
+    setCurrentPicture(0);
+  }
+  function closeProject(){
+    setSelectedProject(null);
+    setCurrentPicture(0);
+  }
+
+  function handleClick(direction){
+    setCurrentPicture((pictureIndex) => {
+      const lastPicture = selectedProject.images.length - 1;
+      if (direction === 'next') return Math.min(pictureIndex + 1, lastPicture);
+      return Math.max(pictureIndex - 1, 0);
+    });
+  }
 
 
 
 
 
 
-
-
-// Main render
+  // Main render
 
   return (
     <main>
@@ -146,13 +162,13 @@ function App() {
         <div className='about-box'>
           <h2>About Me</h2>
           <p>
-            I’m a computer science developer focused on full-stack web development. I primarily work with React, HTML, CSS, and Vite, and I enjoy building clean, responsive applications while continuously improving my skills.
+            I’m a computer science graduate focused on fullstack development, with hands on experience across React, Node.js, and AWS, I enjoy building clean, responsive applications while continuously improving my skills.
           </p>
           <p>
-            I’m intentional about continuously improving my skills through building projects and interview-focused problem-solving. Outside of engineering, I’ve held leadership roles mentoring and organizing groups, which has strengthened my communication and teamwork skills.
+            Im intentional about growth and building projects to level up my skills as an engineer. Outside of engineering I've held leadership roles, mentoring and organizing youth groups which strengthened my communication and collaboration skills.
           </p>
           <p>
-            I’m excited to contribute to a dynamic team where I can grow as an engineer while making a meaningful impact with technology. If you’d like to connect, feel free to reach out via the contact form below!
+            I'm looking to join a team where I can keep growing as an engineer. If you’d like to connect, feel free to reach out via linkedin or <a style={{textDecoration: 'underline', fontWeight: 'normal', color: "white"}} href="mailto:JyhnoCharles@gmail.com">email</a>, or explore my projects below.
           </p>
         </div>
       </section>
@@ -191,7 +207,7 @@ function App() {
                 <p>{p.summary}</p>
               </div>
               <div style={{display:'flex', justifyContent:'flex-end', marginTop:'8px'}}>
-                <button className='view-full' onClick={() => openProject(i)}>View full →</button>
+                <button className='view-full' onClick={() => openProject(i) }>View full →</button>
               </div>
             </div>
           ))}
@@ -308,61 +324,19 @@ function App() {
 
 
 
-              {/* Contact me box  */}
-      {/* <section id='contact' className='contact reveal'>
-        <h2>Contact Me</h2>
-      <form
-  className="contact-form"
-  onSubmit={async (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-
-    // Honeypot (bots fill it, humans won't)
-    if (form.website.value) return;
-
-    const payload = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    const res = await fetch("https://formspree.io/f/XXXXXXX", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    if (res.ok) {
-      form.reset();
-      alert("Sent!");
-    } else {
-      alert("Something went wrong. Try again.");
-    }
-  }}
->
-
-  {/* Honeypot field (hidden) */}
-  {/* <input
-    name="website"
-    type="text"
-    tabIndex="-1"
-    autoComplete="off"
-    style={{ position: "absolute", left: "-9999px" }}
-  /> */}
-
-  {/* <label>Name<input name="name" required /></label> 
-  <label>Email<input name="email" type="email" required /></label>
-  <label>Message<textarea name="message" required /></label>
-  <button type="submit" className="btn">Send</button> */}
-{/* </form> */} 
-
       {/* </section> */}
 
       {selectedProject && (
+        
         <div className='modal-overlay' onClick={closeProject} role='dialog' aria-modal='true'>
           <div className='modal' onClick={(e)=>e.stopPropagation()}>
             <button className='modal-close' onClick={closeProject} aria-label='Close'>×</button>
             <h3>{selectedProject.title}</h3>
+            {selectedProject.link && (
+              <a href={selectedProject.link} target='_blank' rel='noreferrer' aria-label={`${selectedProject.title} Link`} style={{display:'inline-flex', alignItems:'center', gap:'8px', background:'#ffb07c', color:'#000000', padding:'6px 10px', borderRadius:'6px', marginTop:'8px', textDecoration:'none'}}>
+                <span>Open Project</span>
+              </a>
+            )}
             {selectedProject.video && (
               <a href={selectedProject.video} target='_blank' rel='noreferrer' aria-label={`${selectedProject.title} Video`} style={{display:'inline-flex', alignItems:'center', gap:'8px', background:'#FF0000', color:'#fff', padding:'6px 10px', borderRadius:'6px', marginTop:'8px', textDecoration:'none'}}>
                 <svg width='18' height='18' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' aria-hidden='false' focusable='false'>
@@ -379,21 +353,49 @@ function App() {
             ) : (
               <p>{selectedProject.details}</p>
             )}
+
             {selectedProject.images && selectedProject.images.length > 0 && (
-              <div className='modal-images'>
-                {selectedProject.images.slice(0,3).map((src, idx) => (
-                  <img
-                    key={idx}
-                    src={src}
-                    alt={`${selectedProject.title} screenshot ${idx+1}`}
-                    className='modal-image'
-                    onClick={() => setLightboxSrc(src)}
-                    style={{ cursor: 'zoom-in' }}
-                  />
-                ))}
+              <div className='modal-image-viewport'>
+                <div
+                  className='modal-images'
+                  style={{ '--picture-offset': currentPicture }}
+                >
+                  {selectedProject.images.map((src, idx) => (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt={`${selectedProject.title} screenshot ${idx + 1}`}
+                      className='modal-image'
+                      onClick={() => setLightboxSrc(src)}
+                      style={{ cursor: 'zoom-in' }}
+                    />
+                  ))}
+                </div>
+                <div className='button-container'>
+                  <button
+                    id='previous'
+                    onClick={() => handleClick('previous')}
+                    disabled={currentPicture === 0}
+                    aria-label='Previous project image'
+                  >
+                    &lt;
+                  </button>
+                  <button
+                    id='next'
+                    onClick={() => handleClick('next')}
+                    disabled={currentPicture === selectedProject.images.length - 1}
+                    aria-label='Next project image'
+                  >
+                    &gt;
+                  </button>
+                </div>
               </div>
             )}
+
+            
           </div>
+
+          
         </div>
       )}
 
@@ -414,6 +416,21 @@ function App() {
 
 
 export default App
+
+// button slider
+
+
+
+
+ 
+ 
+
+  
+  
+
+  
+
+
 
 {/* Header component with effects */}
 function HeaderWithEffects({ photo }){
